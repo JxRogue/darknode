@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  background: #0d0d0d;
+  color: #00ffcc;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ff0055;
+}
+
+header p {
+  margin-top: -0.5rem;
+  font-size: 1rem;
+  color: #888;
+}
+
+.intro, .tools {
+  margin-top: 2rem;
+}
+
+.tools ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tools li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.tools a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+.tools span {
+  color: #666;
+  margin-left: 1rem;
+  font-size: 0.85rem;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.03;
+  z-index: -1;
+}
