@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>JxRogue | darknode</title>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JxRogue">
+    <meta name="description" content="JxRogue’s Cyber Arsenal: Tools, Frameworks, and Exploits from the Abyss.">
+    <title>JxRogue | Offensive Security. Unseen, Unheard, Unstoppable.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.min.js"></script>
 </head>
 <body>
-  <div id="background"></div>
-  <div class="container">
-    <header class="header">
-      <h1 class="typewriter">JxRogue: darknode</h1>
-      <p class="subheading">Underground Ops | Red Team Arsenal</p>
+    <!-- Parallax Background -->
+    <div id="background"></div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="header-content">
+            <h1>JxRogue</h1>
+            <p class="tagline">The Phantom in the Code. The Ghost of the Network.</p>
+        </div>
     </header>
-    <section class="intro">
-      <p>Welcome to the most secure place on the web. Here, operations are conducted, and tools are built for red teamers and hackers alike. Take a look at the arsenals I’ve developed.</p>
+
+    <!-- SVG Background Animation -->
+    <svg id="svg-background">
+        <circle cx="50%" cy="50%" r="100" class="circle" />
+    </svg>
+
+    <!-- Introduction Section -->
+    <section class="intro fadeIn">
+        <div class="intro-text">
+            <h2>Welcome to the Abyss</h2>
+            <p class="lead">In a world where vulnerabilities hide in plain sight, I make them visible. Through tools, tactics, and techniques known only to the few, I create and control chaos. If you’ve found this, you’re already part of the game.</p>
+            <p>I'm JxRogue. A rogue agent in the world of cybersecurity—specializing in offensive operations. In my domain, silence is deadly, stealth is lethal, and each line of code is a weapon. Explore the arsenal.</p>
+        </div>
     </section>
-    <section class="tools">
-      <h2>Available Tools</h2>
-      <ul>
-        <li><a href="#" class="tool-link">RedGhost <span class="status">coming soon</span></a></li>
-        <li><a href="#" class="tool-link">PolyMorph <span class="status">payload shifter</span></a></li>
-        <li><a href="#" class="tool-link">SlitTunnel <span class="status">reverse shell booster</span></a></li>
-      </ul>
+
+    <!-- Tools Section -->
+    <section class="tools fadeIn">
+        <h2>What’s in the Vault?</h2>
+        <p class="description">Some tools are meant to be used, others to be feared. Here’s what I’ve created for the world of shadows. What you do with them is your business… as long as you leave no trace.</p>
+        <ul>
+            <li><a href="#" class="tool-link" onclick="showPreview('RedGhost')">RedGhost – Invisible. Undetectable. Dangerous. The Phantom Payload.</a></li>
+            <li><a href="#" class="tool-link" onclick="showPreview('PolyMorph')">PolyMorph – Morphs Like a Shadow in the Dark. Evade and Survive.</a></li>
+            <li><a href="#" class="tool-link" onclick="showPreview('SlitTunnel')">SlitTunnel – The Dark Net, Only Darker. Stealthy Connections, Deadly Results.</a></li>
+        </ul>
     </section>
-    <footer class="footer">
-      <p>Domain: <a href="https://www.jerrychips.com" class="footer-link">jerrychips.com</a></p>
-      <p class="footer-note">Last updated: 2025</p>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle">Tool Preview</h2>
+            <p id="modalDescription">Step deeper into the abyss. No going back now.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 JxRogue. All rights... or perhaps none. It’s all about how you play the game.</p>
+        <p class="sneak">Follow the trail. If you can find it. <a href="https://github.com/JxRogue" target="_blank">GitHub</a></p>
     </footer>
-  </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
