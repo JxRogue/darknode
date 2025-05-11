@@ -1,32 +1,35 @@
-// Modal Preview Functionality
-function showPreview(toolName) {
-    const modal = document.getElementById('previewModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDescription = document.getElementById('modalDescription');
+// When DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  // Fade in sections
+  document.querySelectorAll('.fadeIn').forEach(el => {
+    el.style.animationDelay = '0.3s';
+  });
 
-    modal.style.display = 'flex';
+  // Modal logic
+  const modal = document.getElementById('previewModal');
+  const title = document.getElementById('modalTitle');
+  const desc  = document.getElementById('modalDescription');
+  const close = document.querySelector('.close-btn');
 
-    switch(toolName) {
-        case 'RedGhost':
-            modalTitle.innerText = 'RedGhost – Invisible, Dangerous, The Phantom Payload';
-            modalDescription.innerText = 'Step deeper into the abyss. RedGhost is the payload you cannot detect, the ghost in your machine, and the payload that disappears before it executes.';
-            break;
-        case 'PolyMorph':
-            modalTitle.innerText = 'PolyMorph – A Shadow in the Dark';
-            modalDescription.innerText = 'Morphing through systems, evading detection at every turn, PolyMorph is the tool you need if you want to leave no trace.';
-            break;
-        case 'SlitTunnel':
-            modalTitle.innerText = 'SlitTunnel – Dark Net, Only Darker';
-            modalDescription.innerText = 'SlitTunnel creates connections that bleed through firewalls and digital barriers, leaving no trace. Perfect for an anonymous path into any network.';
-            break;
-        default:
-            modalTitle.innerText = 'Unknown Tool';
-            modalDescription.innerText = 'Tool not found. This might be a phantom. Proceed with caution.';
-            break;
+  window.showPreview = tool => {
+    switch(tool) {
+      case 'RedGhost':
+        title.textContent = 'RedGhost';
+        desc.textContent  = 'A ghost you never catch. Payload vanishes before you blink.';
+        break;
+      case 'PolyMorph':
+        title.textContent = 'PolyMorph';
+        desc.textContent  = 'Change shape, change fate. Your undetectable chameleon.';
+        break;
+      case 'SlitTunnel':
+        title.textContent = 'SlitTunnel';
+        desc.textContent  = 'Slide through walls. The stealthiest backdoor in the biz.';
+        break;
     }
-}
+    modal.style.display = 'flex';
+  };
 
-// Close Modal on Close Button
-document.querySelector('.close-btn').addEventListener('click', function() {
-    document.getElementById('previewModal').style.display = 'none';
+  close.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
 });
